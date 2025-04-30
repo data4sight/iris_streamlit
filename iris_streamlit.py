@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import io  # io 모듈 임포트 추가
 
 # 1. 데이터 로드 및 전처리
 @st.cache_data  # 데이터 로딩 함수를 캐싱하여 성능 향상
