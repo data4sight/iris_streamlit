@@ -21,7 +21,12 @@ st.header('데이터 미리보기')
 st.dataframe(df.head())  # 데이터프레임 상위 5행 출력
 
 st.header('데이터 정보')
-df.info()  # 데이터프레임 정보 출력
+#df.info()  # 데이터프레임 정보 출력
+buffer = io.StringIO()
+df.info(buf=buffer)
+s = buffer.getvalue()
+st.text(s)
+
 
 # 3. 데이터 시각화
 st.header('산점도 (Sepal Length vs Sepal Width)')
